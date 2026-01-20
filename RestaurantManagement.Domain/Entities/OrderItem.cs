@@ -16,6 +16,7 @@ namespace RestaurantManagement.Domain.Entities
             get => order_ID;
             set => SetProperty(ref order_ID, value);
         }
+        public Order Order { get; set; } = null!;
 
         public int Dish_ID
         {

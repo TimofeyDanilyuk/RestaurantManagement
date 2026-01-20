@@ -20,5 +20,8 @@ namespace RestaurantManagement.Domain.Entities
             get => tag_ID;
             set => SetProperty(ref tag_ID, value);
         }
+
+        public Dish? Dish { get; set; }
+        public DishTag? Tag { get; set; }
     }
 }

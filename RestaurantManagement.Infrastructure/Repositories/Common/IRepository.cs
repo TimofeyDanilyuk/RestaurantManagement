@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RestaurantManagement.Infrastructure.Repositories
+namespace RestaurantManagement.Infrastructure.Repositories.Common
 {
     public interface IRepository<T> where T : class
     {

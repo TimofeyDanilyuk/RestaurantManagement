@@ -34,5 +34,8 @@ namespace RestaurantManagement.Domain.Entities
             get => category_ID;
             set => SetProperty(ref category_ID, value);
         }
+
+        private List<DishTagLink> dishTagLinks = new();
+        public IReadOnlyList<DishTagLink> DishTagLinks => dishTagLinks.AsReadOnly();
     }
 }

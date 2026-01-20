@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using RestaurantManagement.Infrastructure.Repositories;
+using RestaurantManagement.Infrastructure.Repositories.Interfaces;
 
 namespace RestaurantManagement.WebApi.Controllers
 {

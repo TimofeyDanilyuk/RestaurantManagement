@@ -42,23 +42,5 @@ namespace RestaurantManagement.Domain.Entities
             get => isActive;
             set => SetProperty(ref isActive, value);
         }
-
-        public void SetPassword(string password)
-        {
-            using var hmac = new HMACSHA256();
-            passwordSalt = hmac.Key;
-            passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
-
-            OnPropertyChanged(nameof(PasswordHash));
-            OnPropertyChanged(nameof(PasswordSalt));
-        }
-
-        public bool VerifyPassword(string password)
-        {
-            using var hmac = new HMACSHA256(passwordSalt);
-            var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
-
-            return computedHash.SequenceEqual(passwordHash);
-        }
     }
 }

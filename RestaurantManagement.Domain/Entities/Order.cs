@@ -37,6 +37,6 @@ namespace RestaurantManagement.Domain.Entities
             set => SetProperty(ref paymentStatus, value);
         }
 
-        public ObservableCollection<OrderItem> Items { get; } = new();
+        public ICollection<OrderItem> Items { get; private set; } = new List<OrderItem>();
     }
 }

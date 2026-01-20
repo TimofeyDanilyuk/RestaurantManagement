@@ -20,5 +20,8 @@ namespace RestaurantManagement.Domain.Entities
             get => isActive;
             set => SetProperty(ref isActive, value);
         }
+
+        private List<DishTagLink> dishTagLinks = new();
+        public IReadOnlyList<DishTagLink> DishTagLinks => dishTagLinks.AsReadOnly();
     }
 }

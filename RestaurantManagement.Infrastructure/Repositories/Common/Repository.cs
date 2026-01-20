@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace RestaurantManagement.Infrastructure.Repositories
+namespace RestaurantManagement.Infrastructure.Repositories.Common
 {
     public class Repository<T> : IRepository<T> where T : class
     {
